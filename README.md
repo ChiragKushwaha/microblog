@@ -1,3 +1,3 @@
 # Welcome to Microblog!
 
-This is an example application featured in my [Flask Mega-Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world). See the tutorial for instructions on how to work with it.
+This is flask app, if you want to learn how i made it go follow this <a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world">Blog</a> of <b>Miguel Grinberg</b> He has done a great work.
