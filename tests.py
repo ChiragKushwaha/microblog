@@ -1,8 +1,16 @@
+#!/usr/bin/env python
 from datetime import datetime, timedelta
 import unittest
-from app import app, db
+from app import create_app, db
 from app.models import User, Post
 from config import Config
+
+
+class TestConfig(Config):
+    TESTING = True
+    SQLALCHEMY_DATABASE_URI = 'sqlite://'
+    ELASTICSEARCH_URL = None
+
 
 class UserModelCase(unittest.TestCase):
     def setUp(self):
@@ -88,11 +96,6 @@ class UserModelCase(unittest.TestCase):
         self.assertEqual(f2, [p2, p3])
         self.assertEqual(f3, [p3, p4])
         self.assertEqual(f4, [p4])
-
-
-class TestConfig(Config):
-    TESTING = True
-    SQLALCHEMY_DATABASE_URI = 'sqlite://'
 
 
 if __name__ == '__main__':
